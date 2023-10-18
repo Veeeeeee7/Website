@@ -1,0 +1,79 @@
+body {
+    font-family: "Press Start 2P", cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333333;
+    color: #ff6600;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ff6600;
+}
+
+section {
+    padding: 40px 0;
+    position: relative;
+}
+
+section h2 {
+    color: #00ccff;
+}
+
+section p {
+    font-size: 18px;
+}
+
+section ul {
+    list-style-type: square;
+}
+
+/* Styles for the Back button */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: 2px solid #ff6600;
+}
+
+.back-button:hover {
+    background-color: #00ccff;
+    border: 2px solid #00ccff;
+}
+
+/* ... other styles ... */
+
+/* Unicorn Animation */
+.unicorn {
+    width: 150px;
+    height: 100px;
+    background-image: url("unicorn.jpeg"); /* Replace with your unicorn image */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
