@@ -1,18 +1,26 @@
-.rickroll {
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     color: #fff;
+}
+body {
+    background: #ccc;
+}
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+}
+.links {
     font-family: sans-serif;
     font-size: 3rem;
     text-decoration: none;
 }
-body {
-    background: #ddd;
-}
-h1 {
-    text-decoration: none;
+.rainbow-text {
     margin-top: 0px;
     margin-bottom: 50px;
     text-align: center;
@@ -36,4 +44,24 @@ h1 {
     to {
         transform: rotate(360deg);
     }
+}
+a:link {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: #aaa;
+}
+
+a:active {
+    color: #fff;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
 }
