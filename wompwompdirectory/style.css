@@ -1,19 +1,10 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    color: #fff;
-}
 body {
-    background: #ccc;
+    background-color: #ccc;
 }
-.header {
+header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 10vh;
 }
 .links {
     font-family: sans-serif;
@@ -34,6 +25,12 @@ body {
         -28px 28px #eeff41, -32px 32px #f9a825, -36px 36px #ff5722;
 }
 .rickroll-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    color: #fff;
     animation: spin 5s linear infinite;
 }
 
@@ -64,4 +61,19 @@ a:active {
 a:link,
 a:visited {
     text-decoration: none;
+}
+
+#changeToAboutButton {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#changeToAboutButton:hover {
+    background-color: #2980b9;
 }
