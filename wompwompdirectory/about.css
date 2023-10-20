@@ -66,15 +66,15 @@ section ul {
     position: absolute;
     top: 50%;
     left: -150px;
-    animation: fly 5s linear infinite;
+    animation: fly 1s linear infinite;
 }
 
 @keyframes fly {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-10000%);
     }
     100% {
-        transform: translateX(100%);
+        transform: translateX(1000%);
     }
 }
 
