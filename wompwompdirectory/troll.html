@@ -3,11 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CLick It</title>
+        <title>Moving Button on Click</title>
         <link rel="stylesheet" href="troll.css" />
-        <script defer src="troll.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="scripts/troll.js"></script>
     </head>
     <body>
-        <button id="troll-button">CLick Me!</button>
+        <div>
+            <button id="moving-button">Click Me</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="message"></p>
+                </div>
+            </div>
+            <a href="index.html" class="links">BACK TO HOME</a>
+        </div>
     </body>
 </html>

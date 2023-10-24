@@ -4,6 +4,7 @@ class Main {
     }
 
     button() {
+        console.log("HI");
         if (document.getElementById("changeToAboutButton") != null) {
             document
                 .getElementById("changeToAboutButton")
