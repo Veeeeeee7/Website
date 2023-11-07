@@ -42,6 +42,8 @@
             body {
                 background-color: #ccc;
                 margin: 0;
+                display: flex;
+                flex-direction: column;
             }
             #game-container {
                 height: 97vmin;
@@ -151,6 +153,10 @@
             }
         </style>
         <script src="./scripts/game.js" defer type="module"></script>
+        <script src="./scripts/leaderboard.js" defer type="module"></script>
+        <!-- Add Firebase scripts -->
+        <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database-compat.js"></script>
     </head>
     <body>
         <div id="game-container">
@@ -181,6 +187,7 @@
                 </button>
             </div>
         </div>
+        <div id="leaderboard">leaderboard</div>
         <div class="button-container">
             <a class="link" href="index.html">back to home</a>
         </div>
