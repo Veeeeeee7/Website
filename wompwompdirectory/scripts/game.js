@@ -17,6 +17,8 @@ import { outsideGrid } from "./grid.js";
 
 import { gameStart, resetDirection } from "./input.js";
 
+import { sendData, updateLeaderboard } from "./leaderboard.js";
+
 let lastRenderTime = 0;
 let gameOver = false;
 const gameBoard = document.getElementById("game-board");
@@ -67,12 +69,15 @@ function main(currentTime) {
     }
 }
 
+updateLeaderboard();
 window.requestAnimationFrame(main);
 
 restartButton.onclick = function restartGame() {
     resetSnake();
     resetFood();
     resetDirection();
+    sendData(currentScore[0], currentScore[1], ip.userID);
+    updateLeaderboard();
     snake1Dead = false;
     snake2Dead = false;
     drawAgain = false;
@@ -137,3 +142,21 @@ function checkScore() {
         drawAgain = true;
     }
 }
+
+class IP {
+    constructor() {
+        this.getIpAddress();
+    }
+    async getIpAddress() {
+        let self = this;
+        await fetch("https://api.ipify.org?format=json")
+            .then((response) => response.json())
+            .then((data) => {
+                self.userID = data.ip;
+                // console.log("ip: " + data.ip);
+                // return data.ip;
+            });
+    }
+}
+
+const ip = new IP();
